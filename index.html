@@ -115,15 +115,39 @@
             <h4>Answers</h4>
             <ol type="1">
                 <li>
-                    In statistics, a <i>Distribution</i> is a representation of the way in which the different variables of an attribute are distributed in the statistical units of the statistical population.<br />
+                    In statistics, a <i>Distribution</i> is a representation of the way in which the different value of a variable (of an
+                    attribute) are distributed in the statistical units of the statistical population.<br />
                     As an example let's consider an interview done in a cultural centre to establish the number of subscribers that speak a certain language. The following is the distribution gained from the interview:<br />
                     English:  118<br />
                     Italian: 200<br />
                     Spanish:  68
                 </li>
                 <li>
+                    <p>
+                        We define <i>Univariate distribution</i> of an attribute, the listing of the values of the variable associated to
+                        the attribute.
+                    </p>
+                    <p>
+                        A <i>Multivariate distribution</i> is a Univariate distribution on which the listing is performed over more than
+                        one attribute.
+                    </p>
                 </li>
                 <li>
+                    <p>
+                        A <i>Conditional distribution</i> is the distribution of an attribute to which is associated another attribute.
+                        Alternatively, it is a simple distribution gained from a double distribution. Given a table in which we examine
+                        simultaneously the variables of two attributes X and Y relatives to the same statistical population, we define
+                        <i>Conditional distribution</i> each of the simple distributions of data expressed from a row or from a column
+                        of the table itself.
+                    </p>
+                    <p>
+                        <!-- https://www.treccani.it/enciclopedia/distribuzione-marginale_%28Enciclopedia-della-Matematica%29/ -->
+                        Given a table that organize the values of two variable of two attribute. A <i>Marginal distribution</i> is
+                        each of the simple distributions associated to only one attribute, regardless to the other. So, given
+                        the conjoint distribution represented from the abovementioned table, we have two margianl distributions: one
+                        for the row and for the column, expressed from the total of the rows and from the total of the columns; these
+                        distributions are often reported at the margin of the table.
+                    </p>
                 </li>
             </ol>
         <h3>Applications</h3>
@@ -167,7 +191,7 @@
                     name from using the comma to separate different values.
                     Example where each record is separated by a new line (<tt>CRLF</tt>):<br />
                     value1,value2,value3<tt>CRLF</tt><br />
-                    value4,value5,value6<tt>CRLF</tt><br /><br />
+                    value4,value5,value6<tt>CRLF</tt><br />
                     &emsp;There maybe an optional <i>header line</i> appearing as the first line of the file with the same format as
                     normal record lines. This header will contain names corresponding to the fields in the file and should contain
                     the same number of fields as the records in the rest of the file. Each field may or may not be enclosed in double
