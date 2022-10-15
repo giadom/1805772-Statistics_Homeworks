@@ -206,6 +206,208 @@
         
         <!--- Homework 3 --->
         <div class="Homework number three" id="Homework_3"><h2>Homework 3</h2></div>
+        <h3>Research</h3>
+            <h4>Questions</h4>
+            <ol type="1">
+                <li>
+                    Illustrate the concept of conditional, joint, marginal (relative) frequency using a simple bivariate distribution.
+                </li>
+                <li>
+                    Illustrate the concept of statistical independence and the resulting mathematical relationships between the above frequencies.
+                </li>
+            </ol>
+            <h4>Answers</h4>
+            <ol type="1">
+                <!-- https://www.youtube.com/watch?v=9CkNCIcsOCY -->
+                <li>
+                    <p>
+                        Given a two-way frequency table, <i>conditional realtive frequency</i> is a fraction that tells you how many members of a
+                        group have a particular characteristic. More technically, it is the ratio of a frequency in the center of the table to
+                        the frequency’s row total or column total (and not the number that shows the total number of statistical unit tipically at
+                        the bottom-right).<br />
+                        As an example, let's consider the following table where the number of successful throws into a basket are counted:<br />
+                        <table border="1">
+                            <caption><b>Two-way Realtive Frequency Table</b></caption>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Boys</th>
+                                    <th>Girls</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Made</td>
+                                    <td>7</td>
+                                    <td>6</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>Missed</td>
+                                    <td>11</td>
+                                    <td>9</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <th>18</th>
+                                    <th>15</th>
+                                    <th>33</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        the conditional relative frequency that, if you are given a girl, she also missed the basket is 9/15. 
+                    </p>
+                    
+                    <p>
+                        <!-- A dumb way to rememebr the fact that we consider the inner cells: "You are in the joint" is a way to say that you are in jail -->
+                        With <i>joint realtive frequency</i> we mean the realtive frequencies inside the two-way frequency table.<br />
+                        Given the following table where the number of successful throw into a basket are counted:
+                        <table border="1">
+                            <caption><b>Two-way Realtive Frequency Table</b></caption>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Boys</th>
+                                    <th>Girls</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Made</td>
+                                    <td>7</td>
+                                    <td>6</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>Missed</td>
+                                    <td>11</td>
+                                    <td>9</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <th>18</th>
+                                    <th>15</th>
+                                    <th>33</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        the joint relative frequency of boys who missed the basket is 11/33.
+                    </p>
+                    
+                    <p>
+                        The <i>marginal relative frequency</i> is the opposite of the joint one because the lateral row/column of the table is considered.<br />
+                        Given the following table where the number of number of successful throw inside a basket are counted:
+                        <table border="1">
+                            <caption><b>Two-way Realtive Frequency Table</b></caption>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Boys</th>
+                                    <th>Girls</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Made</td>
+                                    <td>7</td>
+                                    <td>6</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>Missed</td>
+                                    <td>11</td>
+                                    <td>9</td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <th>18</th>
+                                    <th>15</th>
+                                    <th>33</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        the marginal relative frequency of girls who played the game is 15/33.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Given two events <tt>A</tt> and <tt>B</tt>, they are <i>statistical independent</i> if and only if event A occurring
+                        confers no change to the probability of B, when compared to its unconditional probability.<br />
+                    </p>
+                    <p>
+                        The mathematical relationship with conditional relative frequency is that, since conditional relative frequency holds
+                        when two non-independent event happen, the conditional realtive frequency is not independent.
+                    </p>
+                    <p>
+                        For the other kinds of frequencies, the methematical relationship is simply the transportation to the fact that
+                        a certain event occours. Taking the previous example, the probability to pick a girl who played the game is 45.5%
+                        and the probability to pick a boy who missed the basket is 21.2%.
+                    </p>
+                </li>
+            </ol>
+        <h3>Applications</h3>
+            <h4>Question</h4>
+            <ol type="1">
+                <li>
+                    Create a distribution from the data obtained by the program Wireshark, by reading the CSV file generated by the program.
+                </li>
+            </ol>
+            <h4>Answer</h4>
+            <ol type="1">
+                <li>
+                    The proposed solution is in the ZIP file that can be found at <a href="">this</a> GitHub link.
+                </li>
+            </ol>
+        <h3>Research on application</h3>
+            <h4>Questions</h4>
+            <ol type="1">
+                <li>
+                    A survey on ONLINE algorithms (Welford).
+                </li>
+                <li>
+                    In particular, Knuth recursion for the computation of the arithmetic mean (average).
+                </li>
+            </ol>
+            <h4>Answers</h4>
+            <ol type="1">
+                <li>
+                    An <i>online algorithm</i> is an algorithm where inputs are arriving over time, and we need to make decisions on the fly
+                    without knowing what will happen in the future. An offline algorithm, instead, requires all information BEFORE the algorithm start.<br />
+                    &emsp;Selection sort is offline because step 1 is <tt>Find the minimum value in the list</tt>. To do this, you need to have the
+                    entire list available - otherwise, how could you possibly know what the minimum value is? You cannot. Insertion sort, by contrast,
+                    is online because it does not need to know anything about what values it will sort and the information is requested WHILE the algorithm
+                    is running. Simply put, it can grab new values at every iteration.
+                </li>
+                <li>
+                    The average is typical calculated doing: <tt>sum/#of_elements</tt>. Another way to calculate the average is by doing the following:<br />
+                    <tt>previous_average + [(newer_number - previous_average) / #of_elements]</tt><br />
+                    
+                    &emsp;As an example, knowing that the average of two numbers is 7.5, if the average with the new number 3 has to be calculated, we can simply
+                    do:<br />
+                    <tt>7.5 + [(3 - 7.5) / 3] = 7.5 + [-4.5 / 3] = 6</tt>.<br />
+                    
+                    Because the average can be calculated when a new number is added, this algorithm is considered to be an online algorithm.<br />
+                    
+                    With this latter formula we have several advantages:
+                    <ol type="a">
+                        <li>the accumulator which holds the sum of the numbers is not needed (hence we do not have to store a probably very big number)</li>
+                        <li>avoid dealing with operataions that use a very big number like the probably one of the sum</li>
+                    </ol>
+                    For these reason it is very often used in information technology programs.
+                </li>
+            </ol>
         <hr />
         
         <!--- Homework 4 --->
