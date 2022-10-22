@@ -47,7 +47,7 @@
                         At the end, after choosing a phenomenon to observe, choosing observation units and collecting descriptions, we have a dataset.<br />
                     </p>
                     <p>
-                        An <i>attribute</i> is a quality of an object (person, thing, etc.). As an example for a person, the possible attributes are: gender, age, sports etc. A <i>variable</i> is the set of all possible value that an attribute can take.
+                        An <i>attribute</i> is a quality of an object (person, thing, etc.). As an example for a person, the possible attributes are: gender, age, sports etc. A <i>variable</i> is the set of all possible values that an attribute can take.
                     </p>
                 </li>
                 <li>
@@ -413,10 +413,171 @@
         
         <!--- Homework 4 --->
         <div class="Homework number four" id="Homework_4"><h2>Homework 4</h2></div>
+        <h3>Research</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                        Illustrate the parallel between the properties of the relative frequency and the axioms for probability.
+                    </li>
+                    <li>
+                        Discuss some concrete examples of Measure Space (omega, epsilon, P).
+                    </li>
+                    <li>
+                        Illustrate how Measure Theory provides the mathematical foundation for Probability Theory.
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                        To illustrate the parallel, let's first write down the three axioms of probability.<br />
+                        Given &Omega; as the sample space. For each event <i>E</i> in the sample space, the probability
+                        Pr(<i>E</i>) of the event <i>E</i> is a number such that:
+                        <ol type="I">
+                            <li>
+                                0&le;Pr(<i>E</i>)&le;1
+                            </li>
+                            <li>
+                                Pr(&Omega;)=1
+                            </li>
+                            <li>
+                                For each disjoint event pair <i>E</i><sub>1</sub>,<i>E</i><sub>2</sub>,... (i.e.
+                                such that <i>E</i><sub>i</sub>&cap;<i>E</i><sub>j</sub>=&empty; when i&ne;j), we have:<br />
+                                Pr(&cup;<sup>&infin;</sup><sub>i=1</sub><i>E</i><sub>i</sub>)=&sum;<sup>&infin;</sup><sub>i=1</sub>Pr(<i>E</i><sub>i</sub>)
+                            </li>
+                        </ol>
+                        The translation is the following:
+                        <ol type="I">
+                            <li>
+                                f<sub>r</sub>(&empty;)=0
+                            </li>
+                            <li>
+                                f<sub>r</sub>(POPULATION)=1
+                            </li>
+                            <li>
+                                f<sub>r</sub>(attribute1)&cap;f<sub>r</sub>(attribute2) = &empty;
+                                &rArr;
+                                f<sub>r</sub>(attribute1 &or; attribute2) = f<sub>r</sub>(attribute1) + f<sub>r</sub>(attribute2)
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        The examples are the following:
+                        <ol type="a">
+                            <li>
+                                Given a perfectly uniform die:
+                                <ul>
+                                    <li>&Omega;={1,2,3,4,5,6} (i.e. all the faces of the die);</li>
+                                    <li>Pr(1)=Pr(2)=Pr(3)=Pr(4)=Pr(5)=Pr(6)=1/6 (i.e. all the outcomes have the same probability to appear).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Given a perfectly uniform coin:
+                                <ul>
+                                    <li>&Omega;={Head,Tail} (i.e. the two faces of the coin);</li>
+                                    <li>Pr(Head)=Pr(Tail)=1/2 (i.e. all the outcomes have the same probability to appear).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Given a basket with three colorful balls:
+                                <ul>
+                                    <li>&Omega;={Red,Green,Blue};</li>
+                                    <li>Pr(Red)=Pr(Green)=Pr(Blue)=1/3 (i.e. all the outcomes have the same probability to appear).</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        The Measure theory provides the mathematical foundation for Probability theory because:
+                        <ul>
+                            <li>every element in a set can be measured by a function;</li>
+                            <li>the measure of the empty set is equal to zero;</li>
+                            <li>to measure disjoint elements in the set, we simply sum their measures.</li>
+                        </ul>
+                        The aforementioned motivations can be mapped easily to the World of probability as stated by the axioms themselves.
+                    </li>
+                </ol>
+        <h3>Applications</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                        Simulate a sequence of coin tosses (with 0:=unsuccess and 1:=success) and draw a
+                        dynamic chart of the relative frequency of success f<sub>s</sub>=n<sub>s</sub>/n
+                    </li>
+                    <li>
+                        Simulate a sequence of coin tosses (with 0:=unsuccess and 1:=success) and draw a
+                        dynamic chart of the absolute frequency of success n<sub>s</sub>.
+                    </li>
+                    <li>
+                        Simulate a sequence of coin tosses (with 0:=unsuccess and 1:=success) and draw a
+                        dynamic chart of the normalized frequency n<sub>s</sub>s/&radic;(n)
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                        The proposed solution is in the ZIP file that can be found at
+                        <a href="https://github.com/giadom/1805772-Statistics_Homeworks/blob/main/Homework_4/Answer_for_1.zip">this</a>
+                        GitHub link.
+                    </li>
+                    <li>
+                        The proposed solution is in the ZIP file that can be found at
+                        <a href="https://github.com/giadom/1805772-Statistics_Homeworks/blob/main/Homework_4/Answer_for_2.zip">this</a>
+                        GitHub link.
+                    </li>
+                    <li>
+                        The proposed solution is in the ZIP file that can be found at
+                        <a href="https://github.com/giadom/1805772-Statistics_Homeworks/blob/main/Homework_4/Answer_for_3.zip">this</a>
+                        GitHub link.
+                    </li>
+                </ol>
+        <h3>Research on application</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
         <hr />
         
         <!-- Homework 5 -->
         <div class="Homework number five" id="Homework_5"><h2>Homework 5</h2></div>
+        <h3>Research</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Application<h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Research on application</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
         <hr />
     </body>
 </html>
