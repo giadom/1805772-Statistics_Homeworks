@@ -23,6 +23,11 @@
                     <li><a href="#Homework_3">Homework 3</a></li>
                     <li><a href="#Homework_4">Homework 4</a></li>
                     <li><a href="#Homework_5">Homework 5</a></li>
+                    <li><a href="#Homework_6">Homework 6</a></li>
+                    <li><a href="#Homework_7">Homework 7</a></li>
+                    <li><a href="#Homework_8">Homework 8</a></li>
+                    <li><a href="#Homework_9">Homework 9</a></li>
+                    <li><a href="#Homework_10">Homework 10</a></li>
                 </ul>
             </div>
         </p>
@@ -429,7 +434,7 @@
             <h4>Answers</h4>
                 <ol type="1">
                     <li>
-                        To illustrate the parallel, let's first write down the three axioms of probability.<br />
+                        To illustrate the parallels, let's first write down the three axioms of probability.<br />
                         Given &Omega; as the sample space. For each event <i>E</i> in the sample space, the probability
                         Pr(<i>E</i>) of the event <i>E</i> is a number such that:
                         <ol type="I">
@@ -501,15 +506,18 @@
                 <ol type="1">
                     <li>
                         Simulate a sequence of coin tosses (with 0:=unsuccess and 1:=success) and draw a
-                        dynamic chart of the relative frequency of success f<sub>s</sub>=n<sub>s</sub>/n
+                        dynamic chart of the relative frequency of success f<sub>s</sub>=n<sub>s</sub>/n.<br />
+                        In the same chart, add also a vertical histogram representing the distribution of the above frequency on the last trial.
                     </li>
                     <li>
                         Simulate a sequence of coin tosses (with 0:=unsuccess and 1:=success) and draw a
-                        dynamic chart of the absolute frequency of success n<sub>s</sub>.
+                        dynamic chart of the absolute frequency of success n<sub>s</sub>.<br />
+                        In the same chart, add also a vertical histogram representing the distribution of the above frequency on the last trial.
                     </li>
                     <li>
                         Simulate a sequence of coin tosses (with 0:=unsuccess and 1:=success) and draw a
-                        dynamic chart of the normalized frequency n<sub>s</sub>s/&radic;(n)
+                        dynamic chart of the normalized frequency n<sub>s</sub>s/&radic;(n).<br />
+                        In the same chart, add also a vertical histogram representing the distribution of the above frequency on the last trial.
                     </li>
                 </ol>
             <h4>Answers</h4>
@@ -530,6 +538,123 @@
                         GitHub link.
                     </li>
                 </ol>
+        <h3>Researches about theory relevant to application</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                        Give a simple introduction to graphics in the .NET environment. How to create a bitmap and a chart on it.
+                    </li>
+                    <li>
+                        Explain in simple terms how to get device coordinates from world coordinates.
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                        The Graphics Device Interface (GDI) is a component of Microsoft Windows responsible for representing graphical
+                        objects and transmitting them to output devices such as monitors and printers. GDI+ is the enhancment of GDI.<br />
+                        &emsp;Graphics objects are the heart of GDI+. They are represented by the Graphics class, which defines
+                        methods and properties to draw and fill graphics objects.<br />
+                        &emsp;We can divide Graphics class methods into three categories: draw, fill, and miscellaneous. Draw
+                        methods are used to draw lines, curves etc.. Fill methods fill the interior area of graphics objects.
+                        There are also a few miscellaneous methods that fall in neither category-for example, MeasureString and Clear.
+                        <br /><br />
+                        A Bitmap is an object used to work with images defined by pixel data.<br />
+                        <tt>Public b As Bitmap</tt><br />
+                        Before you can draw lines and shapes, render text or display and manipulate images with GDI+, you need to
+                        create a Graphics object. The Graphics object represents a GDI+ drawing surface, and is the object that is
+                        used to create graphical images.<br />
+                        <tt>Public g As Graphics</tt><br />
+                        Create a "Graphics" object from a Bitmap. Then use "Graphics"' methods to do what you need to the image
+                        and then you can use the image how you need to. Your "Graphics" object is created to enable drawing on
+                        another object.<br />
+                        <tt>g = Graphics.FromImage(b)</tt>
+                    </li>
+                    <li>
+                        To plot lines, graphics, etc. we have to transform a coordinate coming from the real World to a coordinate of
+                        the virtual World (i.e. the World presented in computers). To do so we use two formulas: one for the abscissa
+                        and one for the ordinate. In particular, for the y-axis we have to take into account that the origin starts
+                        at the top left.<br />
+                        The formulas are:
+                        <ol type="I">
+                            <li>
+                                x-axis coordinate of the virtual World =<br />
+                                (x_axis_coordinate_of_the_real_World - x_axis_origin_of_the_real_World)/<br (>
+                                (x_axis_end_of_the_real_World - x_axis_origin_of_the_real_World) * width_of_the_virtual_World_graphics
+                            </li>
+                            <li>
+                                y-axis coordinate of the virtual World =<br />
+                                height_of_the_virtual_World_graphics -<br />
+                                (y_axis_coordinate_of_the_real_World - y_axis_origin_of_the_real_World)/<br />
+                                (y_axis_top_of_the_real_World - y_axis_origin_of_the_real_World)*<br />
+                                height_of_the_virtual_World_graphics
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+        <hr />
+        
+        <!-- Homework 5 -->
+        <div class="Homework number five" id="Homework_5"><h2>Homework 5</h2></div>
+        <h3>Research</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Application<h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Research on application</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <hr />
+
+        <!-- Homework 6 -->
+        <div class="Homework number six" id="Homework_6"><h2>Homework 6</h2></div>
+        <h3>Research</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Application<h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
         <h3>Research on application</h3>
             <h4>Questions</h4>
                 <ol type="1">
@@ -543,8 +668,119 @@
                 </ol>
         <hr />
         
-        <!-- Homework 5 -->
-        <div class="Homework number five" id="Homework_5"><h2>Homework 5</h2></div>
+        <!-- Homework 7 -->
+        <div class="Homework number seven" id="Homework_7"><h2>Homework 7</h2></div>
+        <h3>Research</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Application<h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Research on application</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <hr />
+        
+        <!-- Homework 8 -->
+        <div class="Homework number eight" id="Homework_8"><h2>Homework 8</h2></div>
+        <h3>Research</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Application<h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Research on application</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <hr />
+
+        <!-- Homework 9 -->
+        <div class="Homework number nine" id="Homework_9"><h2>Homework 9</h2></div>
+        <h3>Research</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Application<h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <h3>Research on application</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                    </li>
+                </ol>
+        <hr />
+
+        <!-- Homework 10 -->
+        <div class="Homework number ten" id="Homework_10"><h2>Homework 10</h2></div>
         <h3>Research</h3>
             <h4>Questions</h4>
                 <ol type="1">
