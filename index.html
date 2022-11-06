@@ -646,7 +646,7 @@
                                 <i><b>Variance</b></i>. Variance is an indicator of the variability of a set of data. A low value means that
                                 the data is grouped very close together, while a high variance indicates more distributed data.<br />
                                 The formule of the Variance is the following:<br />
-                                s<sup>2</sup> = <sup>n</sup>&sum;<sub>i = 1</sub>[(x<sub>i</sub> - X)<sup>2</sup>] / (n-1)<br />
+                                s<sup>2</sup> = <sup>n</sup>&sum;<sub>i = 1</sub>[(x<sub>i</sub> - X)<sup>2</sup>] / n<br />
                                 where:
                                 <ul>
                                     <li>s<sup>2</sup> is the variance that is always measured in power unit;</li>
@@ -737,6 +737,49 @@
                         </ol>
                     </li>
                     <li>
+                        Because the sample mean X<sup>-</sup> is a random variable, the sample mean itself has an expected value
+                        and a variance, and thus has a probability distribution.<br /><br />
+                        We need some new notation for the mean and variance of the distribution of sample means, simply
+                        to differentiate from the mean and variance of the distribution of individual values. Denote
+                        the mean of the distribution of sample means by &mu;<sub>X-</sub> and denote the variance of the
+                        distribution of sample means by &sigma;<sup>2</sup><sub>X-</sub>.<br />
+                        &emsp;It really doesn’t matter what the distribution of individual values looks like, if we make a
+                        histogram of <b>many</b> sample means, the distribution will almost always be approximately normally distributed!<br />
+                        This gives the following two results:
+                        <ol type="1)">
+                            <li>
+                                the distribution of sample means seems to have the same center as the
+                                distribution of individual values;
+                            </li>
+                            <li>
+                                the variation in the distribution of sample means is much less than the original distribution.
+                                (In other words, the distribution of sample means is much skinnier than the distribution of
+                                individual values).
+                            </li>
+                        </ol>
+                        The first point tells us that the mean of the distribution of sample values, denoted &mu;<sub>X-</sub>,
+                        is the same as the mean of the individual values, &mu;! Therefore, &mu;<sub>X-</sub> = &mu;<br />
+                        In symbols:<br />
+                        E[X-] = E[<sup>n</sup>&sum;<sub>i=1</sub>X<sub>i</sub> / n]<br />
+                        = 1/n * <sup>n</sup>&sum;<sub>i=1</sub>E[X<sub>i</sub>]<br />
+                        = 1/n * n * E[X]<br />
+                        = E[X]<br />
+                        =X-<br />
+                        &emsp;What about the second point? The process of averaging takes many individual values that are spread out
+                        and reduces them to one value, namely the sample mean X-<sub>i</sub>. All that variation in the individual values is
+                        significantly reduced! Therefore, it should be obvious that &sigma;<sup>2</sup><sub>X-</sub> &lt;
+                        &sigma;<sup>2</sup>.<br />
+                        In symbols:<br />
+                        &sigma;<sup>2</sup><sub>X-</sub> = Var(X-)<br />
+                        = Var((<sup>n</sup>&sum;<sub>i=1</sub>X<sub>i</sub>) / n)<br />
+                        = 1/n<sup>2</sup> * Var(<sup>n</sup>&sum;<sub>i=1</sub>X<sub>i</sub>)<br />
+                        = 1/n<sup>2</sup> * n * Var(X)<br />
+                        &asymp; &sigma;<sup>2</sup> / n-1<br />
+                        So in conclusion we can say that the variance decreases as the sample size n increases.<br />
+                        <br />
+                        During sample analysis, the use of 'n-1' instead of 'n' in the denominator is called a Bessel correction.
+                        The sample only represents an estimate of the complete population and the sample mean only partially fits this
+                        estimate. The correction eliminates this inaccuracy.
                     </li>
                 </ol>
         <h3>Application<h3>
@@ -753,7 +796,7 @@
                 <ol type="1">
                     <li>
                         The proposed solution is in the ZIP file that can be found at
-                        <a href="">this</a>
+                        <a href="https://github.com/giadom/1805772-Statistics_Homeworks/blob/main/Homework_6/Answer_for_1.zip">this</a>
                         GitHub link.
                     </li>
                 </ol>
