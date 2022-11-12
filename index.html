@@ -808,7 +808,7 @@
             <h4>Questions</h4>
                 <ol type="1">
                     <li>
-                        Try to understand the general idea of the Lebesgue-Stieltjes integral and whi it is useful concept
+                        Try to understand the general idea of the Lebesgue-Stieltjes integral and why it is useful concept
                         and notation in Theory of Probability.
                     </li>
                     <li>
@@ -819,8 +819,41 @@
             <h4>Answers</h4>
                 <ol type="1">
                     <li>
+                        Folland (1984) summarizes the difference between the Riemann and Lebesgue approaches thus:
+                        "to compute the Riemann integral of <i>f</i>, one partitions the domain <i>[a, b]</i> into subintervals",
+                        while in the Lebesgue integral, "one is in effect partitioning the range of <i>f</i>".<br /><br />
+                        For the Riemann integral, the domain is partitioned into intervals, and bars are constructed to
+                        meet the height of the graph. The areas of these bars are added together, and this approximates
+                        the integral, in effect by summing areas of the form <i>f(x)dx</i>  where <i>f(x)</i> is the height of a
+                        rectangle and <i>dx</i> is its width.<br /><br />
+                        For the Lebesgue integral, the range is partitioned into intervals, and so the region under
+                        the graph is partitioned into horizontal "slabs" (which may not be connected sets). The area
+                        of a small horizontal "slab" under the graph of <i>f</i>, of height <i>dy</i>, is equal to the measure of the
+                        slab's width times <i>dy</i>:<br />
+                        &emsp;&mu;({<i>x</i>∣<i>f(x)</i> &gt; <i>y</i>})<i>dy</i>.<br />
+                        The Lebesgue integral may then be defined by adding up the areas of these horizontal slabs.<br /><br />
+                        You can use the Lebesgue integral to generalize the concept of the expected value to all kinds of functions;
+                        Theory of Probability, in fact, deals a lot with Lebesgue integration. In all those cases where you
+                        are not dealing with a probability distribution but rather an event that takes only a certain set of values,
+                        you must use the following formula for the expected value:<br />
+                        E[x]=&int;<i>X</i>d<i>P</i>.
                     </li>
                     <li>
+                        This proof uses the assumption of finite variance Var(X<sub>i</sub>)=&sigma;<sup>2</sup> (for all <i>i</i>).
+                        The imdependence of the random variables imples no correlation between them, and we have that:<br />
+                        &emsp;Var(X<sup>-</sup><sub>n</sub>) = Var( (1/n) * (X<sub>1</sub>+...+X<i>n</i>) ) =
+                        (1/n<sup>2</sup>) * Var(X<sub>1</sub>+...+X<i>n</i>) = (n*&sigma;<sup>2</sup>)/n<sup>2</sup> =
+                        &sigma;<sup>2</sup>/n.<br />
+                        The common mean &mu; of the sequence is the mean of the sample average:<br />
+                        &emsp;E[X<sup>-</sup><sub>n</sub>] = &mu;.<br />
+                        Using Chebyshev's inequality on X<sup>-</sup><sub>n</sub> results in<br />
+                        &emsp;P(|X<sup>-</sup><sub>n</sub>-&mu;|&ge;&epsilon;)&le;&sigma;<sup>2</sup>/(n*&epsilon;<sup>2</sup>).<br />
+                        This may be used to obtain the following:<br />
+                        &emsp;P(|X<sup>-</sup><sub>n</sub>-&mu;|&lt;&epsilon;) =
+                        1-P(|X<sup>-</sup><sub>n</sub>-&mu;|&ge;&epsilon;) &ge; 1 - (&sigma;<sup>2</sup>/(n*&epsilon;<sup>2</sup>)).<br />
+                        As n approaches infinity, the expression approches 1. And by definition of convergence in probability,
+                        we have obtained<br />
+                        &emsp;X<sup>-</sup><sub>n</sub> --&gt;<sup>P</sup> &mu; when n --&gt; &infin;
                     </li>
                 </ol>
         <h3>Application<h3>
