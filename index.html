@@ -883,14 +883,34 @@
             <h4>Questions</h4>
                 <ol type="1">
                     <li>
-                        Search on the Web about the problem of the first application question.
+                        Search on the Web about possible derivation of the Normal Distribution.
+                    </li>
+                    <li>
+                        Search on the Web about method to generate Normal variate (e.g. Marsaglia method, etc.)
                     </li>
                 </ol>
             <h4>Answers</h4>
                 <ol type="1">
                     <li>
-                        The application can be used as a simulator that simulates the probability to hit a circled target with
-                        a dart given the fact that each point inside the target has the same probability to be taken.
+                        The central limit theorem (also known as CLT) states that the sum of many random variables will have
+                        an approximately Normal distribution.<br />
+                        &emsp;In particular, let X<sub>i</sub> with i = 0, 1, ..., n be independents and identically distributed
+                        random variables with zero mean and variance &sigma;<sup>2</sup>, then
+                        Z = &radic;n*((&sum;<sub>i</sub> X<sub>i</sub>) / n) will tend to be approximately
+                        distributed according to the Normal distribution with zero mean and variance &sigma;<sup>2</sup> as n increases.
+                    </li>
+                    <li>
+                        <b>Marsaglia polar method.</b> This method is a pseudo-random number sampling method for generating a
+                        pair of independents identically distributed Normal random variables.<br />
+                        &emsp;In particular, let (x, y) be two random values chosen uniformly on ((-1, 1), (-1, 1)) such that
+                        0 &lt; s = x + y &lt; 1, then the pair (x⋅&radic;(-2*ln(s) / s) , y*&radic;(-2⋅ln(s) / s) ) is a pair of
+                        independents and identically distributed Normal random variables.<br />
+                        <b>Box-Muller transform.</b>This method is a random number sampling method for generating a pair of 
+                        independents and identically distributed Normal random variables.<br />
+                        &emsp;In particular, it works as follow:<br />
+                        Let (r, &theta;) be two random values chosen uniformly on ((0, 1), (0,1)), then the pair
+                        (Z0 = R⋅cos(2&pi;*&theta;), Z1 = R⋅sin(2&pi;*&theta;)), with R = &radic;(-2⋅ln(r)), is a pair
+                        of independents identically distributed Normal random variables.<br />
                     </li>
                 </ol>
         <h3>Application<h3>
@@ -902,7 +922,7 @@
                     </li>
                     <li>
                         Search for the methods to generate Normal random variables X, Y and simulate the following distribution:
-                        X, X<sup>2</sup>, X/Y<sup>2</sup>, X<sup>2</sup>/Y<sup>2</sup>, X/Y. Find in the Web what are these distributions.
+                        X, X<sup>2</sup>, X/Y<sup>2</sup>, X<sup>2</sup>/Y<sup>2</sup>, X/Y.
                     </li>
                 </ol>
             <h4>Answers</h4>
@@ -922,10 +942,83 @@
                         <!-- How to create Bell curve in Excel: https://www.youtube.com/watch?v=Ot6kOHBB8Vw -->
                         <!-- Plotting Chi-Square distribution: https://www.youtube.com/watch?v=68t1b0KnXOo -->
                         The proposed solution is in the ZIP file that can be found at
-                        <a href="https://github.com/giadom/1805772-Statistics_Homeworks/blob/main/Homework_7/Answer_for_2.zip">this</a>
+                        <a href="https://github.com/giadom/1805772-Statistics_Homeworks/blob/main/Homework_8/Answer_for_2.zip">this</a>
                         GitHub link.
                     </li>
                 </ol>
-        <hr />
+        <h3>Research on application</h3>
+            <h4>Questions</h4>
+                <ol type="1">
+                    <li>
+                        Find in the Web what are the distributions that you just simulated.
+                    </li>
+                </ol>
+            <h4>Answers</h4>
+                <ol type="1">
+                    <li>
+                        <b>Normal distribution.</b> The Normal distribution (also known as Gaussian distribution) is a
+                        probability distribution that is symmetric around the mean. This distribution shows that data near the mean
+                        are more frequent in occurrence than data far from the mean. This distribution occours very very frequently
+                        in natural phenomena.
+                        <br />
+                        <b>&chi;<sup>2</sup> distribution.</b> The &chi;<sup>2</sup> distribution is the distribution of a sum of
+                        the squares of n independents and identically distributed Normal random variables.
+                        n is called <i>degrees of freedom</i>.<br />
+                        &emsp;In particular, if Z<sub>1</sub>,...,Z<sub>n</sub> are independent Normal random variables, then the
+                        sum of their squares Q = <sup>n</sup>&sum;<sub>i=1</sub> Z<sub>i</sub><sup>2</sup> is distributed according
+                        to the &chi;<sup>2</sup> distribution with n degrees of freedom and is expressed as
+                        Q &sim; &chi;<sup>2</sup>(n).
+                        <br />
+                        <b>Cauchy distribution.</b> The Cauchy distribution is the distribution of the ratio between two
+                        independents and identically distributed Normal random variables X, Y with expected value 0 and variance 1.<br>
+                        &emsp;In particular:
+                        <ul>
+                            <li>
+                                given X as a Normal random variable with expected value 0 and variance 1
+                            </li>
+                            <li>
+                                given Y as a Normal random variable with expected value 0 and variance 1 
+                            </li>
+                        </ul>
+                        then C = (X / Y) is distributed according to the Cauchy distribution with expected value 0 and variance 1 and is
+                        expressed as C &sim; Cauchy(0, 1).
+                        <br />
+                        <b>Student's t distribution.</b> The Student's t distribution with n degrees of freedom is the distribution
+                        of the ratio between a Normal random variable X and the square root of a &chi;<sup>2</sup> random variable
+                        divided by n.<br />
+                        &emsp;In particular:
+                        <ul>
+                            <li>
+                                given X as a Normal random variable with expected value 0 and variance 1
+                            </li>
+                            <li>
+                                given Y as a &chi;<sup>2</sup> random variable with n degrees of freedom
+                            </li>
+                            <li>
+                                given the fact that X and Y are independent
+                            </li>
+                        </ul>
+                        then T = X / &radic;(Y / n) is distributed according to the Student's t distribution with n degrees of freedom
+                        and is expressed as T &sim; t(n).
+                        <br />
+                        <b>Fisher's F distribution.</b> The Fisher's F distribution with n and m degrees of freedom is the distribution
+                        of the ratio between a &chi;<sup>2</sup> random variable X with n degrees of freedom and the &chi;<sup>2</sup>
+                        random variable Y with m degrees of freedom, the whole weighted by using (m / n) as weight (X, Y are independent).<br />
+                        &emsp;In particular:
+                        <ul>
+                            <li>
+                                given X as a &chi;<sup>2</sup> random variable with n degrees of freedom
+                            </li>
+                            <li>
+                                given Y as a &chi;<sup>2</sup> random variable with m degrees of freedom
+                            </li>
+                            <li>
+                                given the fact that they are independent
+                            </li>                            
+                        </ul>
+                        then F = (X / n) / (Y / m) is distributed according to the Fisher's F distribution with n and
+                        m degrees of freedom and is expressed as F &sim; Fisher(n, m).
+                    </li>
+                </ol>
     </body>
 </html>
